@@ -1,4 +1,4 @@
-adherents-par-region
-====================
+wdutils
+=======
 
-Filter and adapt an export of the CRM.
+Small PHP utilities for Wikidata
