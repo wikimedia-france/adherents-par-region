@@ -20,5 +20,9 @@ $thisPage = basename($_SERVER['PHP_SELF']);
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="css/style.css">
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="js/raphael-min.js"></script>
+<script src="js/g.raphael.js"></script>
+<script src="js/g.bar.js"></script>
+<script src="js/g.pie.js"></script>
 </head>
 <body>

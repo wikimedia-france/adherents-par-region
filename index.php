@@ -58,7 +58,31 @@ if ( isset($_FILES["csv"])) {
 		$membersByRegion = new membersByRegion($csv->data);
 		$membersByRegion->run();
 
-		echo '<h3><span class="glyphicon glyphicon-list" aria-hidden="true"></span> Result</h3>';
+		?>
+		<h3><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Statistiques</h3>
+
+		<?php $membersByRegion->textStats(); ?>
+		
+		<div id="canvas">
+			<div id="canvas_side" style="float:right;">
+
+				<h4>Répartition par genre</h4>
+				<div id="canvas_genre"></div>
+
+				<h4>Répartition par décennie de naissance</h4>
+				<div id="canvas_ages"></div>
+			</div>
+
+			<h4>Nombre de membres par région</h4>
+			<div id="canvas_france"></div>
+		</div>
+
+		<?php  
+		$membersByRegion->stats();
+
+		$page->alert('<a href="reportcard.php">Afficher les statistiques dans une page séparée</a>');
+
+		echo '<h3><span class="glyphicon glyphicon-export" aria-hidden="true"></span> Fichier traité</h3>';
 		#check for warnings
 
 		if(!empty($membersByRegion->warnings)) {
@@ -67,19 +91,20 @@ if ( isset($_FILES["csv"])) {
 			}
 		}
 
-		if (!empty($membersByRegion->contacts)) {/*
+		if (!empty($membersByRegion->contacts)) {
+		/*
+		
 			echo "<pre>";
 			print_r($membersByRegion->counters);
 
-			echo "=====================\n";
+		/*	echo "=====================\n";
 			print_r($membersByRegion->contacts);
 	/*		print_r($_FILES["csv"]); // Just in case I need to check the full csv
 			print_r($csv->data); //*/ /*
 			echo "</pre>";
-			
+			//*/
 
 			$_SESSION["MBR"]=serialize($membersByRegion);
-			//*/
 			$page->alert('<a href="export.php">Télécharger </a>',"success");
 		} else {
 			$page->alert('The CSV file seems to contain no data.','danger');

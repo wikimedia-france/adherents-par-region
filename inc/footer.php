@@ -4,9 +4,7 @@ $timeSpent= $timerStop - $timerStart;
 ?>
 
 <footer class="footer">
-	<ul class="pull-right">
-		<li class="navbar-logo"><a href="https://github.com/wikimedia-france/adherents-par-region"><img title="Developed by Sylvain Boissel" src="img/github-light.png" /></a></li>
-	</ul>
+	<span class="navbar-logo pull-right"><a href="https://github.com/wikimedia-france/adherents-par-region"><img title="Developed by Sylvain Boissel" src="img/github-light.png" /></a></span>
 	<div class="container">
 		<p class="text-muted">Script runtime: <?php echo round($timeSpent,2); ?> seconds.</p>
 	</div>      		
