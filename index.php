@@ -11,7 +11,7 @@ include_once("inc/header.php");
 <div class="container theme-showcase" role="main">
 <div class="jumbotron">
 	<h1>Liste des adhérents par région</h1>
-	<p>Cet outil convertit un export des adhérents 	</p>
+	<p>Cet outil filtre et adapte un export des adhérents de Wikimédia France.</p>
 
 	<div id="helpToggle" style="float: right;">[Cliquer pour afficher/cacher l'aide]</div>
 </div>
@@ -20,12 +20,12 @@ include_once("inc/header.php");
 	<h3><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> Aide</h3>
 	<!-- TODO : complete documentation -->
 	<ol>
-		<li>Sur CiviCRM, faire une recherche muticritères</li>
-		<li>Type de résultats : contacts - Statut de l'adhésion "Nouveau" ou "Current".</li>
+		<li>Sur <a href="https://dons.wikimedia.fr/" title="CiviCRM">CiviCRM</a>, faire une recherche muticritères</li>
+		<li>Type de résultats : contacts — Statut de l'adhésion «&nbsp;Nouveau&nbsp;» ou «&nbsp;Current&nbsp;»</li>
 		<li>Exporter les contacts</li>
-		<li>Cocher "Sélectionner les champs à exporter" et choisir "Export mensuel adhérents</li>
-		<li>Cliquer sur "Exporter" et enregistrer sur l'ordinateur</li>
-		<li>Importer le fichier enregistré ci-desous</li>
+		<li>Cocher «&nbsp;Sélectionner les champs à exporter&nbsp;» et choisir «&nbsp;Export mensuel adhérents&nbsp;»</li>
+		<li>Cliquer sur «&nbsp;Exporter&nbsp;» et enregistrer sur l'ordinateur</li>
+		<li>Importer le fichier précedemment enregistré dans le formulaire ci-desous.</li>
 	</ol>
 </div>
 
