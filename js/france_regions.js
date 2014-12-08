@@ -78,16 +78,18 @@
 
 	var legend = {};
 
-	legend.title	= france.text(60,520,"Légende :").attr({ font: "20px sans-serif" });
-	legend.n0		= france.circle(25,550,8). attr(attr);
-	legend.n0.text	= france.text(50,550, "0");
-	legend.n5		= france.circle(75,550,8). attr(attr).attr({fill: "#d7e3f4"});
-	legend.n5.text	= france.text(100,550, "< 5");
-	legend.n10		= france.circle(125,550,8). attr(attr).attr({fill: "#87aade"});
-	legend.n10.text	= france.text(150,550, "< 10");
-	legend.n25		= france.circle(175,550,8). attr(attr).attr({fill: "#3771c8"});
-	legend.n25.text	= france.text(200,550, "< 25");
-	legend.n50		= france.circle(225,550,8). attr(attr).attr({fill: "#214478"});
-	legend.n50.text	= france.text(250,550, "< 50");
-	legend.n100		= france.circle(275,550,8). attr(attr).attr({fill: "#0b1728"});
-	legend.n100.text= france.text(300,550, "< 100");
+	legend.title		= france.text(60,520,"Légende :").attr({ font: "20px sans-serif" });
+	legend.eg0			= france.circle(25,550,8). attr(attr);
+	legend.eg0.text		= france.text(50,550, "0");
+	legend.inf5			= france.circle(75,550,8). attr(attr).attr({fill: "#d7e3f4"});
+	legend.inf5.text	= france.text(100,550, "≤ 5");
+	legend.inf10		= france.circle(125,550,8). attr(attr).attr({fill: "#87aade"});
+	legend.inf10.text	= france.text(150,550, "≤ 10");
+	legend.inf25		= france.circle(175,550,8). attr(attr).attr({fill: "#3771c8"});
+	legend.inf25.text	= france.text(200,550, "≤ 25");
+	legend.inf50		= france.circle(225,550,8). attr(attr).attr({fill: "#214478"});
+	legend.inf50.text	= france.text(250,550, "≤ 50");
+	legend.inf100		= france.circle(275,550,8). attr(attr).attr({fill: "#162d50"});
+	legend.inf100.text	= france.text(300,550, "≤ 100");
+	legend.sup100		= france.circle(325,550,8). attr(attr).attr({fill: "#0b1728"});
+	legend.sup100.text	= france.text(350,550, "> 100");

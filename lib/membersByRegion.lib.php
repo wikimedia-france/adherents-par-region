@@ -215,22 +215,22 @@ class membersByRegion {
 	  					case 0:
 	  						$color = "#fff";
 	  						break;
-	  					case ($value >= 1 && $value <5):
+	  					case ($value >= 1 && $value <=5):
 	  						$color = "#d7e3f4";
 	  						break;
-	  					case ($value >= 5 && $value < 10):
+	  					case ($value > 5 && $value <= 10):
 	  						$color = "#87aade";
 	  						break;
-	  					case ($value >= 10 && $value < 25):
+	  					case ($value > 10 && $value <= 25):
 	  						$color = "#3771c8";
 							break;
-						case ($value >= 25 && $value < 50):
+						case ($value > 25 && $value <= 50):
 							$color = "#214478";
 							break;
-						case ($value >= 50 && $value <100):
+						case ($value > 50 && $value <= 100):
 							$color = "#162d50";
 							break;
-						case ($value >= 100):
+						case ($value > 100):
 							$color = "#0b1728";
 							break;
 	  				}
@@ -288,9 +288,10 @@ class membersByRegion {
 			$labels = implode(",", array_keys($this->counters["birthdecade"]));
 
 			$y=25;
+			$hop = 245/(count($this->counters["birthdecade"]));
 			foreach ($this->counters["birthdecade"] as $key => $value) {
 				$html.= "birthdateCanvas.text(10,$y, '$key : $value').attr({ font: '14px sans-serif', 'text-anchor': 'start' });\n";
-				$y+=26;
+				$y+=$hop;
 			}
 			$html.= "var birthdates = birthdateCanvas.hbarchart(100, 10, 250, 250, [[$bars]]).hover(fin, fout);\n";
 			$html.= '</script>';

@@ -4,14 +4,14 @@ session_start();
 include_once("lib/membersByRegion.lib.php");
 
 include_once("lib/pageInterface.lib.php");
-$page= new pageInterface("Statistiques");
+$page= new pageInterface("Statistiques adhérents de Wikimédia France");
 include_once("inc/header.php");
 
 $membersByRegion = unserialize($_SESSION["MBR"]);
 
 ?>
 <div class="container theme-showcase" role="main">
-		<h3><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> Statistiques</h3>
+		<h3>Statistiques adhérents de Wikimédia France</h3>
 
 		<?php $membersByRegion->textStats(); ?>
 		
