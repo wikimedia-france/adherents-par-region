@@ -121,6 +121,7 @@ class membersByRegion {
 						$contact["gender"] = $value;
 						break;
 					case 'Domicile-Courriel':
+					case 'Facturation-Courriel':
 						$contact["courriel"] = $value;
 						break;
 					case 'Domicile-Téléphone-Téléphone':
