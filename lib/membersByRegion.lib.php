@@ -107,7 +107,7 @@ class membersByRegion {
 								$this->counters["birthdate"][$year] = 1;
 							}
 
-							$decade = round($year, -1)."s";
+							$decade = (floor($year / 10 ) * 10) ."s";
 							if (!empty($this->counters["birthdecade"][$decade])) {
 								$this->counters["birthdecade"][$decade]++;
 							} else {
